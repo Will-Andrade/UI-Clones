@@ -116,3 +116,46 @@ body {
     color: #555;
     cursor: pointer;
 }
+
+.videos {
+    background-color: #f9f9f9;
+}
+
+.categories {
+    padding: 1rem 2rem;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.category-section {
+    display: flex;
+    overflow: hidden;
+}
+
+.category {
+    margin-right: 1rem;
+    word-wrap: none;
+    white-space: nowrap;
+    border: 1px solid #CCC;
+    border-radius: 100px;
+    background-color: #e7e7e7;
+    padding: .5rem 1rem;
+    font-size: inherit;
+    /* Buttons have small font sizes. This fixes that by inheritance. */
+    cursor: pointer;
+    transition: background-color 150ms;
+}
+
+.category:active {
+    background-color: #606060;
+    color: #fff;
+    border-color: #EEE;
+}
+
+.category:hover {
+    background-color: #DDD;
+}
+
+.category:last-child {
+    margin-right: 0;
+}
