@@ -9,3 +9,42 @@
 body {
     font-family: Roboto, Arial, sans-serif;
 }
+
+/* 
+    "repeat(auto-fill)" tells the grid column to fit as many items on it as it can. The "minmax(value, maxValue)" tells the column to have a min width of *value* at all times, and maxValue will be the max value for all items.
+ */
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem 1rem;
+    padding: 3rem 0;
+    margin: 0 1.5rem;
+    border-top: 4px solid #CCC;
+}
+
+.video-section:first-child {
+    border-top: none;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail {
+    position: relative;
+    display: flex;
+}
+
+.thumbnail::after {
+    content: attr(data-duration);
+    position: absolute;
+    background-color: rgba(0, 0, 0, .85);
+    color: #fff;
+    bottom: 5px;
+    right: 5px;
+    padding: .1em .3em;
+    border-radius: .3em;
+    font-size: .9rem;
+}
